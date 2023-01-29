@@ -1,0 +1,145 @@
+/* to make border between every element */
+/* universal selector */
+/* global reset */
+/* margin and padding=0 to delete the many distances between the all elements  */
+* {
+  /* border-top: 10px solid sienna; */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #444;
+  font-family: sans-serif;
+  border-top: 10px solid #1098ad;
+}
+
+/* this is trick to center the container inside of the browser */
+/* margin will adabted when i resize the page */
+.container {
+  width: 700px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin: 0 auto;
+}
+
+/* links: css flexbox Grid */
+nav a:link {
+  font-size: 20px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.header {
+  background-color: #f7f7f7;
+  /* padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px; */
+  padding: 20px 30px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+
+/* between the border and copyright */
+.last-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #1098ad;
+  border-bottom: 5px solid #1098ad;
+  padding-top: 30px; /*to make a padding above (Related Posts) */
+  padding-bottom: 30px;
+  width: 500px;
+}
+
+h1,
+h2,
+h3 {
+  color: #1098ad;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h3 {
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-bottom: 15px;
+  /* he wanted to make a space above the titles so he make margin bottom of paragragh!!wow.. */
+}
+
+ul,
+ol {
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+
+/* i want a margin between elements but this code will make a margin after last element so i wrote another code to make margin last's value =0 */
+li {
+  /* color: #1098ad; */
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+#copyright {
+  font-size: 18px;
+}
+
+#related {
+  font-style: italic;
+}
+
+.related-bullet {
+  list-style: none;
+}
+
+.center-title {
+  text-align: center;
+}
+
+/* the last element in list will be bold */
+li:last-child {
+  font-style: italic;
+}
+
+a:visited {
+  color: rgb(54, 52, 196);
+  /* text-decoration: dotted; */
+}
+
+a:hover {
+  color: #1098ad;
+  font-style: italic;
+  text-decoration: line-through #1098ad;
+}
+
+a:active {
+  font-style: italic;
+}
+
+/* percent here mean that the photo will be 50% from the page and it will adabt in case i change the dimensions of the page */
+.top-photo {
+  width: 50%;
+  height: auto;
+}
