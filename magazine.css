@@ -46,7 +46,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding-top: 30px; /*to make a padding above (Related Posts) */
+  padding-top: 30px; 
   padding-bottom: 30px;
   width: 500px;
 }
@@ -111,7 +111,6 @@ li:last-child {
   text-align: center;
 }
 
-/* the last element in list will be bold */
 li:last-child {
   font-style: italic;
 }
@@ -131,7 +130,6 @@ a:active {
   font-style: italic;
 }
 
-/* percent here mean that the photo will be 50% from the page and it will adabt in case i change the dimensions of the page */
 .top-photo {
   width: 50%;
   height: auto;
