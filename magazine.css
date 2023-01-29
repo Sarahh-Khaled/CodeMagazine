@@ -1,7 +1,4 @@
-/* to make border between every element */
-/* universal selector */
-/* global reset */
-/* margin and padding=0 to delete the many distances between the all elements  */
+
 * {
   /* border-top: 10px solid sienna; */
   margin: 0;
@@ -14,8 +11,6 @@ body {
   border-top: 10px solid #1098ad;
 }
 
-/* this is trick to center the container inside of the browser */
-/* margin will adabted when i resize the page */
 .container {
   width: 700px;
   /* margin-left: auto;
@@ -82,7 +77,6 @@ p {
   font-size: 18px;
   font-family: sans-serif;
   margin-bottom: 15px;
-  /* he wanted to make a space above the titles so he make margin bottom of paragragh!!wow.. */
 }
 
 ul,
@@ -91,7 +85,6 @@ ol {
   margin-bottom: 20px;
 }
 
-/* i want a margin between elements but this code will make a margin after last element so i wrote another code to make margin last's value =0 */
 li {
   /* color: #1098ad; */
   font-size: 15px;
