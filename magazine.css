@@ -1,4 +1,7 @@
-
+/* to make border between every element */
+/* universal selector */
+/* global reset */
+/* margin and padding=0 to delete the many distances between the all elements  */
 * {
   /* border-top: 10px solid sienna; */
   margin: 0;
@@ -9,8 +12,12 @@ body {
   color: #444;
   font-family: sans-serif;
   border-top: 10px solid #1098ad;
+  position: relative;
+  /* we make that for button setting */
 }
 
+/* this is trick to center the container inside of the browser */
+/* margin will adabted when i resize the page */
 .container {
   width: 700px;
   /* margin-left: auto;
@@ -34,7 +41,7 @@ article {
   padding-right: 40px; */
   padding: 20px 30px;
   margin-bottom: 60px;
-  height: 80px;
+  /* height: 80px; */
 }
 
 /* between the border and copyright */
@@ -46,7 +53,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding-top: 30px; 
+  padding-top: 30px; /*to make a padding above (Related Posts) */
   padding-bottom: 30px;
   width: 500px;
 }
@@ -77,6 +84,7 @@ p {
   font-size: 18px;
   font-family: sans-serif;
   margin-bottom: 15px;
+  /* he wanted to make a space above the titles so he make margin bottom of paragragh!!wow.. */
 }
 
 ul,
@@ -85,10 +93,13 @@ ol {
   margin-bottom: 20px;
 }
 
+/* i want a margin between elements but this code will make a margin after last element so i wrote another code to make margin last's value =0 */
 li {
   /* color: #1098ad; */
   font-size: 15px;
   margin-bottom: 10px;
+  /* display: inline; */
+  /*inline: this make the element take the space occupied so the list element become side by side */
 }
 
 li:last-child {
@@ -111,12 +122,13 @@ li:last-child {
   text-align: center;
 }
 
+/* the last element in list will be bold */
 li:last-child {
   font-style: italic;
 }
 
 a:visited {
-  color: rgb(54, 52, 196);
+  color: #1098ad;
   /* text-decoration: dotted; */
 }
 
@@ -130,7 +142,35 @@ a:active {
   font-style: italic;
 }
 
+/* percent here mean that the photo will be 50% from the page and it will adabt in case i change the dimensions of the page */
 .top-photo {
   width: 50%;
   height: auto;
+}
+
+nav a:link {
+  /*
+  background-color: rgb(98, 214, 205);
+  margin: 20px;
+  padding: 20px;
+  display: block;
+  */
+  margin-right: 30px;
+  margin-top: 10px;
+  /* it's not work because it inline element!! but there a trick */
+  display: inline-block;
+}
+
+/* to delete the margin-right from (Grid) that under (the code magazine) */
+nav a:link:last-child {
+  margin-right: 0;
+}
+
+button {
+  font-size: 15px;
+  padding: 15px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
 }
