@@ -1,26 +1,48 @@
+/* to make border between every element */
+/* universal selector */
+/* global reset */
+/* margin and padding=0 to delete the many distances between the all elements  */
 * {
-  /* border-top: 10px solid #1098ad; */
+  /* border-top: 10px solid sienna; */
   margin: 0;
   padding: 0;
+  /* this attribute to make a width = the content and padding  */
+  /* we put it here to apply in every single element */
+  box-sizing: border-box;
 }
 
-/* PAGE SECTIONS */
 body {
   color: #444;
   font-family: sans-serif;
-
   border-top: 10px solid #1098ad;
   position: relative;
+  /* we make that for button setting */
 }
 
+/* this is trick to center the container inside of the browser */
+/* margin will adabted when i resize the page */
 .container {
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
 }
 
-.main-header {
+/* links: css flexbox Grid */
+nav {
+  font-size: 18px;
+  text-align: center;
+}
+
+nav a:link {
+  font-size: 20px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+
+.header {
   background-color: #f7f7f7;
   /* padding: 20px;
   padding-left: 40px;
@@ -30,32 +52,19 @@ body {
   /* height: 80px; */
 }
 
-nav {
-  font-size: 18px;
-  /* text-align: center; */
-}
-
-article {
-  margin-bottom: 60px;
-}
-
-.post-header {
+/* between the border and copyright */
+.last-header {
   margin-bottom: 40px;
-  /* position: relative; */
 }
 
+/* Related Posts Section */
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  /* padding-top: 50px;
-  padding-bottom: 50px; */
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
 }
 
-/* SMALLER ELEMENTS */
-h1,
 h2,
 h3 {
   color: #1098ad;
@@ -63,8 +72,9 @@ h3 {
 
 h1 {
   font-size: 26px;
-  text-transform: uppercase;
+  color: #1098ad;
   font-style: italic;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -78,16 +88,11 @@ h3 {
   margin-top: 40px;
 }
 
-h4 {
-  font-size: 20px;
-  text-transform: uppercase;
-  text-align: center;
-}
-
 p {
-  font-size: 22px;
   line-height: 1.5;
+  font-size: 18px;
   margin-bottom: 15px;
+  /* he wanted to make a space above the titles so he make margin bottom of paragragh!!wow.. */
 }
 
 ul,
@@ -96,82 +101,76 @@ ol {
   margin-bottom: 20px;
 }
 
+/* i want a margin between elements but this code will make a margin after last element so i wrote another code to make margin last's value =0 */
 li {
-  font-size: 20px;
+  font-size: 15px;
   margin-bottom: 10px;
   /* display: inline; */
+  /*inline: this make the element take the space occupied so the list element become side by side */
 }
 
 li:last-child {
   margin-bottom: 0;
 }
 
-#author {
-  font-style: italic;
-  font-size: 18px;
-}
-
 #copyright {
-  font-size: 16px;
-}
-
-.related-author {
   font-size: 18px;
-  font-weight: bold;
 }
 
-.related {
-  list-style: none;
-}
-
-li:first-child {
-  font-weight: bold;
-}
-
-li:last-child {
+#related {
   font-style: italic;
 }
 
-li:nth-child(even) {
-  /* color: red; */
+.related-bullet {
+  font-size: 18px;
+  font-weight: bold;
+  list-style: none;
+  margin-left: 0;
 }
 
-/* Misconception: this won't work! */
-article p:first-child {
-  color: red;
+.center-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-/* Styling links */
-a:link {
-  color: #1098ad;
-  text-decoration: none;
-}
+/* the last element in list will be bold */
+/* li:last-child {
+  font-style: italic;
+} */
 
 a:visited {
-  /* color: #777; */
   color: #1098ad;
+  text-decoration: dotted;
 }
 
 a:hover {
-  color: orangered;
-  font-weight: bold;
-  text-decoration: underline orangered;
+  color: #1098ad;
+  font-style: italic;
+  text-decoration: line-through #1098ad;
 }
 
 a:active {
-  background-color: black;
   font-style: italic;
 }
-/* LVHA */
 
-.post-img {
+/* percent here mean that the photo will be 50% from the page and it will adabt in case i change the dimensions of the page */
+.top-photo {
   width: 100%;
   height: auto;
 }
 
 nav a:link {
-  margin-right: 30px;
-  margin-top: 10px;
+  /*
+  background-color: rgb(98, 214, 205);
+  margin: 20px;
+  padding: 20px;
+  display: block;
+  */
+  margin-right: 5px;
+  /* margin-top: 7px; */
+  /* margin top it's not work because it inline element!! but there a trick */
   display: inline-block;
 }
 
@@ -180,17 +179,15 @@ nav a:link:last-child {
 }
 
 button {
-  font-size: 22px;
-  padding: 20px;
+  font-size: 15px;
+  padding: 15px;
   cursor: pointer;
-
   position: absolute;
-  /* top: 50px;
-  left: 50px; */
   bottom: 50px;
   right: 50px;
 }
 
+/* pseudo element */
 h1::first-letter {
   font-style: normal;
   margin-right: 5px;
@@ -203,13 +200,71 @@ h2 {
 
 h2::before {
   content: "TOP";
-  background-color: #ffe70e;
   color: #444;
+  background-color: yellow;
   font-size: 16px;
   font-weight: bold;
-  display: inline-block;
   padding: 5px 10px;
+  display: inline-block;
   position: absolute;
   top: -10px;
   right: -25px;
+}
+
+/* FLEXBOX */
+.clearfix {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.author-box {
+  display: flex;
+  align-items: center;
+}
+
+.author {
+  margin-bottom: 0;
+  margin-left: 50px;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.related-author {
+  font-size: 14px;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-style: italic;
+}
+
+/* FLEXBOX LAYOUT */
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-bottom: 60px;
+}
+
+article {
+  flex: 0 0 825px;
+  margin-bottom: 0;
+}
+
+aside {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  flex: 0 0 300px;
 }
