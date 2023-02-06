@@ -1,9 +1,6 @@
 * {
-  /* border-top: 10px solid sienna; */
   margin: 0;
   padding: 0;
-  /* this attribute to make a width = the content and padding  */
-  /* we put it here to apply in every single element */
   box-sizing: border-box;
 }
 
@@ -12,11 +9,8 @@ body {
   font-family: sans-serif;
   border-top: 10px solid #1098ad;
   position: relative;
-  /* we make that for button setting */
 }
 
-/* this is trick to center the container inside of the browser */
-/* margin will adabted when i resize the page */
 .container {
   width: 1200px;
   /* margin-left: auto;
@@ -48,7 +42,6 @@ article {
   /* height: 80px; */
 }
 
-/* between the border and copyright */
 .last-header {
   margin-bottom: 40px;
 }
@@ -184,7 +177,6 @@ h1::first-letter {
 }
 
 h2 {
-  /* background-color: orange; */
   position: relative;
 }
 
