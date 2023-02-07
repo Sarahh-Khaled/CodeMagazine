@@ -1,13 +1,6 @@
-/* to make border between every element */
-/* universal selector */
-/* global reset */
-/* margin and padding=0 to delete the many distances between the all elements  */
 * {
-  /* border-top: 10px solid sienna; */
   margin: 0;
   padding: 0;
-  /* this attribute to make a width = the content and padding  */
-  /* we put it here to apply in every single element */
   box-sizing: border-box;
 }
 
@@ -16,11 +9,8 @@ body {
   font-family: sans-serif;
   border-top: 10px solid #1098ad;
   position: relative;
-  /* we make that for button setting */
 }
 
-/* this is trick to center the container inside of the browser */
-/* margin will adabted when i resize the page */
 .container {
   width: 1200px;
   /* margin-left: auto;
@@ -28,7 +18,6 @@ body {
   margin: 0 auto;
 }
 
-/* links: css flexbox Grid */
 nav {
   font-size: 18px;
   text-align: center;
@@ -38,26 +27,15 @@ nav a:link {
   font-size: 20px;
 }
 
-article {
-  margin-bottom: 60px;
-}
-
 .header {
   background-color: #f7f7f7;
-  /* padding: 20px;
-  padding-left: 40px;
-  padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
-  /* height: 80px; */
 }
 
-/* between the border and copyright */
 .last-header {
   margin-bottom: 40px;
 }
 
-/* Related Posts Section */
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
@@ -92,8 +70,7 @@ p {
   line-height: 1.5;
   font-size: 18px;
   margin-bottom: 15px;
-  /* he wanted to make a space above the titles so he make margin bottom of paragragh!!wow.. */
-}
+ }
 
 ul,
 ol {
@@ -101,13 +78,10 @@ ol {
   margin-bottom: 20px;
 }
 
-/* i want a margin between elements but this code will make a margin after last element so i wrote another code to make margin last's value =0 */
 li {
   font-size: 15px;
   margin-bottom: 10px;
-  /* display: inline; */
-  /*inline: this make the element take the space occupied so the list element become side by side */
-}
+  }
 
 li:last-child {
   margin-bottom: 0;
@@ -135,11 +109,6 @@ li:last-child {
   margin-bottom: 20px;
 }
 
-/* the last element in list will be bold */
-/* li:last-child {
-  font-style: italic;
-} */
-
 a:visited {
   color: #1098ad;
   text-decoration: dotted;
@@ -155,22 +124,13 @@ a:active {
   font-style: italic;
 }
 
-/* percent here mean that the photo will be 50% from the page and it will adabt in case i change the dimensions of the page */
 .top-photo {
   width: 100%;
   height: auto;
 }
 
 nav a:link {
-  /*
-  background-color: rgb(98, 214, 205);
-  margin: 20px;
-  padding: 20px;
-  display: block;
-  */
   margin-right: 5px;
-  /* margin-top: 7px; */
-  /* margin top it's not work because it inline element!! but there a trick */
   display: inline-block;
 }
 
@@ -187,14 +147,12 @@ button {
   right: 50px;
 }
 
-/* pseudo element */
 h1::first-letter {
   font-style: normal;
   margin-right: 5px;
 }
 
 h2 {
-  /* background-color: orange; */
   position: relative;
 }
 
@@ -221,6 +179,7 @@ h2::before {
 .author-box {
   display: flex;
   align-items: center;
+  margin-bottom: 10px;
 }
 
 .author {
@@ -249,22 +208,19 @@ h2::before {
   font-style: italic;
 }
 
-/* FLEXBOX LAYOUT */
-.row {
-  display: flex;
-  align-items: flex-start;
-  gap: 75px;
-  margin-bottom: 60px;
+/* CSS GRID LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
 }
 
-article {
-  flex: 0 0 825px;
-  margin-bottom: 0;
+.header {
+  grid-column: 1 / span 2;
 }
 
-aside {
-  flex-grow: 0;
-  flex-shrink: 1;
-  flex-basis: auto;
-  flex: 0 0 300px;
+footer {
+  grid-column: 1/ -1;
 }
